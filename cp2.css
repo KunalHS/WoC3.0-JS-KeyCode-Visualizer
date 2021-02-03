@@ -1,1 +1,21 @@
-body{background-color:azure;}
+#after_press{
+    width: 70%;
+    background-color: red;
+    border-radius: 25px;
+    text-align: center;
+    margin: auto;
+    
+}
+
+#keycode{
+    font-size:100px;
+}
+
+.tabs{
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    background-color: aqua;
+    border-radius: 5px;
+     
+}

@@ -168,7 +168,7 @@ const keyCodes = {
     223: '`',
     224: 'left or right ⌘ key (firefox)',
     225: 'altgr',
-    226: '< /git >, left back slash',
+  226: '< /git >, left back slash',
     230: 'GNOME Compose Key',
     231: 'ç',
     233: 'XF86Forward',
@@ -181,7 +181,118 @@ const keyCodes = {
     251: 'unlock trackpad (Chrome/Edge)',
     255: 'toggle touchpad',
 };
-var x;
-for(x in keyCodes){
-document.getElementById("table").innerHTML+="<tr><td>"+x+"</td><td>"+keyCodes[x]+"</td></tr>"    
+
+// function f1()
+// {
+  
+// }
+
+// for (let i = 0; i < 256; i++) {
+//     var code = document.getElementById("table_data").innerHTML;
+//     code ="<tr><td>"+keyCodes[i]+"</td></tr>";
+
+// }
+
+// document.write("<h4>"+keyCodes[]+"</h4>")
+
+// var arr1 =[];
+// var j=0;
+// for (let i = 0; i < 256; i++) {
+
+//   // document.write("<h4>"+keyCodes[i]+"</h4>")
+//   if (keyCodes[i]==true) {
+
+//       arr1[j] = keyCodes[i];
+//       j++;
+//   }
+  
+// }
+
+// document.write(arr1[]);
+
+// function add_data(keyCodes){
+//   const table = document.getElementById("add_data_here");
+//   keyCodes.forEach(item =>{
+    
+//     let row = table.insertRow();
+    
+//     let code = row.insertCell(0);
+//     code.innerHTML=item.keycode;
+    
+//     let key = row.insertCell(1);
+//     key.innerHTML = item.keyval;
+    
+//   }) ;
+// }
+
+var x,y;
+
+for (x in keyCodes) {
+  document.getElementById("table_data").innerHTML +=`<td > ${x}</td>
+                                                      <td>${keyCodes[x]}</td>
+  `;
 }
+
+// var y;
+// for (y in keyCodes) {
+//   document.getElementById("table_data").innerHTML += "<td>"+keyCodes[y]+"</td>" ;
+// }
+
+
+
+// for (const key in object) {
+//   if (Object.hasOwnProperty.call(object, key)) {
+//     const element = object[key];
+    
+//   }
+// }
+function f1()
+{
+ var table = document.getElementById('tbl');
+var data = document.getElementById('after_press');
+
+
+  table.style.display ='block';
+  data.style.display='none';
+
+  var button_status = document.getElementById('show_button')
+  
+  button_status.style.display='none';
+
+}
+
+
+function f2(){
+  var element = document.body;
+  element.classList.toggle("theme");
+}
+
+document.addEventListener('keydown',keyPress)
+
+function keyPress(e)
+{
+document.getElementById('after_press').innerHTML=`
+  <h3 id="keycode">${e.which}</h3>
+  <h3 class="tabs">${e.key}</h3>
+  <h3 class="tabs">${e.code}</h3>
+  <h3 class="tabs">${e.ctrlKey}</h3>
+  <h3 class="tabs">${e.shiftKey}</h3>
+  <h3 class="tabs">${e.altKey}</h3>
+  <h3 class="tabs">${e.metaKey}</h3>
+  
+ 
+  `;
+  document.getElementById('tbl').style.display="none";
+
+  document.getElementById('after_press').style.display="block";
+
+  var button_status = document.getElementById('show_button').style.display='inline';
+  
+}
+
+// document.addEventListener("keydown", function(event) {
+//   console.log(event.key);
+// })
+
+
+

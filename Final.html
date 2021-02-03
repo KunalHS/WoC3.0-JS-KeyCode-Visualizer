@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        /* nav{
+            text-align: right;
+            padding-right: 1em;
+
+        } */
+        .theme{
+            background-color: black;
+            color: white;
+        }
+        /* .btn{
+            background-color: blueviolet;
+            border-radius: 8px;
+
+            padding: 0.7em;
+            font-size: 1em;
+        } */
+        #show_button{
+            display: none;
+        }
+        /* .btn:hover{
+            background-color: cyan;
+        } */
+        #tbl{
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="cp2.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+
+    <!-- Milligram CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+
+    <!-- You should properly set the path from the main file. -->
+</head>
+<body>
+    <nav>
+    <button onclick="f1()" class="btn" id="show_button" ><b>Table</b></button>
+    <button onclick="f2()" class="btn"><b>Toggle</b></button>
+   
+</nav>
+    <table id="tbl">
+        <thead>
+            <th>Keycodes</th>
+            <th>Key</th>
+        </thead>
+        <tbody id="table_data">
+          
+        
+        </tbody>
+    </table>
+  <div id="after_press">
+    
+  </div>
+  
+    
+    <script src="data.js"></script>
+</body>
+</html>
